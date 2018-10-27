@@ -1,0 +1,715 @@
+       BCD 3THERMAL LPCS                                                       
+       BCD 9FWD LAP SKIRT(COLD STEADY STATE)
+       END                                                                      
+       BCD 3NODE DATA
+C        FORWARD LAP ALUMINUM-2219 SKIRT
+           -1,  -310., 0.   $ LOX TEMPERATURE
+           2,   70.,  1.    $ MIDPOINT OF AL (L=6.06in., t=0.30in.)
+           3,   70., -1.    $ SURFACE INTERFACE
+           4,   70.,  1.    $ MIDPOINT OF AL (L=2.49in., t=0.22in.)
+           5,   70., -1.    $ SURFACE INTERFACE
+           6,   70.,  1.    $ MIDPOINT OF AL (L=2.27in., t=0.38in.)
+           7,   70., -1.    $ SURFACE INTERFACE
+           8,   70.,  1.    $ MIDPOINT OF AL (L=1.48in., t=0.22in.)
+           9,   70., -1.    $ SURFACE INTERFACE
+           10,  70.,  1.    $ MIDPOINT OF AL (L=16.98in., t=0.08in.)
+           11,  70., -1.    $ SURFACE INTERFACE
+           12,  70.,  1.    $ MIDPOINT OF AL (L=2.96in., t=0.217in.)
+           13,  70., -1.    $ SURFACE INTERFACE     
+C        ALUMINUM-7075 SPLICE AREA
+           14,  70.,  1.    $ MIDPOINT OF AL (L=2.54in., t=0.15in.)
+           15,  70., -1.    $ SURFACE INTERFACE
+           16,  70.,  1.    $ MIDPOINT OF AL (L=2.54in., t=0.217in.)
+           17,  70., -1.    $ SURFACE INTERFACE
+           18,  70.,  1.    $ MIDPOINT OF AL (L=2.54in., t=0.15in.)
+           19,  70., -1.    $ SURFACE 
+C        MIDSPLICE POINT (STATION 687.33)
+           20,  70., -1.    $ SURFACE INTERFACE 
+           21,  70., -1.    $ SURFACE INTERFACE
+           22,  70., -1.    $ SURFACE INTERFACE
+           2000,70.,  1.    $ MIDPOINT OF AL (L=0.15in., t=0.15in.)
+           2701,70., -1.    $ SURFACE INTERFACE 
+C        ALUMINUM-7075 SPLICE AREA - COMPOSITE SIDE
+           23,  70.,  1.    $ MIDPOINT OF AL (L=2.54in., t=0.15in.)
+           24,  70., -1.    $ SURFACE INTERFACE
+           25,  70.,  1.    $ MIDPOINT OF COMPOSITE (L=2.54in., t=0.217in.)
+           26,  70., -1.    $ SURFACE INTERFACE
+           27,  70.,  1.    $ MIDPOINT OF AL (L=2.54in., t=0.15in.)
+           28,  70., -1.    $ SURFACE
+C        ALUMINUM FRAME
+           2001,70., -1.    $ SURFACE INTERFACE
+           2002,70.,  1.    $ MIDPOINT OF AL (L=5.45in., t=0.15in.)
+           2003,70., -1.    $ TOP SURFACE
+           2004,70., -1.    $ BOTTOM SURFACE
+           2005,70., -1.    $ END SURFACE
+C        INTERIOR SKIRT SURFACES
+           29,  70., -1.    $ SURFACE
+           30,  70., -1.    $ SURFACE 
+           31,  70., -1.    $ SURFACE
+           32,  70., -1.    $ SURFACE
+           33,  70., -1.    $ SURFACE
+           34,  70., -1.    $ SURFACE 
+C        EXTERIOR SKIRT SURFACES (OML)
+           114, 70., -1.    $ SURFACE   $ AL 7075
+           123, 70., -1.    $ SURFACE   $ AL 7075
+           129, 70., -1.    $ SURFACE
+           130, 70., -1.    $ SURFACE 
+           131, 70., -1.    $ SURFACE
+           132, 70., -1.    $ SURFACE
+           133, 70., -1.    $ SURFACE
+           134, 70., -1.    $ SURFACE 
+C        GAS TEMPERATURES
+           35,  70.,  1.    $ INTERNAL AMBIENT AIR
+           -36, 55., 0.    $ AIR PURGE INLET
+           -37, -14., 0.    $ EXTERNAL AMBIENT AIR
+C
+           -370, -25., 0.    $ ov intertank purge air from RP tunnel, afc 5/31/98
+C
+C         RP Tank bot Dome surface, afc 5/31/98
+C
+           -3701, -30., 0.    $ ov RP tank bot. dome surface, afc 5/31/98
+C
+C         PURGE FLOW NODES
+           350, 70., -1.
+           351, 70., -1.
+           352, 70., -1.
+C         LOX TANK INSULATION
+           100, 70.,  1.    $ HTA MIDPOINT
+           101, 70., -1.    $ HTA SURFACE
+C         CRYOFOAM INSULATION (MIDPOINTS)
+           214, 70., 1.   
+           223, 70., 1.    
+           229, 70., 1.   
+           230, 70., 1.
+           231, 70., 1.   
+           232, 70., 1.    
+           233, 70., 1.   
+           234, 70., 1.
+C         CRYOFOAM INSULATION (SURFACES)
+           314, 70., -1.   
+           323, 70., -1.    
+           329, 70., -1.   
+           330, 70., -1.
+           331, 70., -1.   
+           332, 70., -1.    
+           333, 70., -1.   
+           334, 70., -1.
+C         HTA INSULATION (MIDPOINTS)
+           414, 70., 1.   
+           423, 70., 1.    
+           429, 70., 1.   
+           430, 70., 1.
+           431, 70., 1.   
+           432, 70., 1.    
+           433, 70., 1.   
+           434, 70., 1.
+C         HTA INSULATION (SURFACES)
+           514, 70., -1.   
+           523, 70., -1.    
+           529, 70., -1.   
+           530, 70., -1.
+           531, 70., -1.   
+           532, 70., -1.    
+           533, 70., -1.   
+           534, 70., -1.
+       END
+       BCD 3SOURCE DATA
+       END                                                                      
+       BCD 3CONDUCTOR DATA
+C         FORWARD LAP ALUMINUM-2219 SKIRT f=1.55, f=1.0
+       SIV    1, 1, 2, A1, 10.5  $6.78          $CONDUCTION THROUGH SKIRT
+       SIV    2, 2, 3, A1, 10.5  $6.78          $CONDUCTION THROUGH SKIRT
+       SIV    3, 3, 4, A1, 18.8  $12.1          $CONDUCTION THROUGH SKIRT
+       SIV    4, 4, 5, A1, 18.8  $12.1          $CONDUCTION THROUGH SKIRT
+       SIV    5, 5, 6, A1, 35.7  $23.0          $CONDUCTION THROUGH SKIRT
+       SIV    6, 6, 7, A1, 35.7  $23.0          $CONDUCTION THROUGH SKIRT
+       SIV    7, 7, 8, A1, 32.9  $21.2          $CONDUCTION THROUGH SKIRT
+       SIV    8, 8, 9, A1, 32.9  $21.2          $CONDUCTION THROUGH SKIRT
+       SIV    9, 9, 10, A1, 0.99 $0.64         $CONDUCTION THROUGH SKIRT
+       SIV    10, 10, 11, A1, 0.99 $0.64       $CONDUCTION THROUGH SKIRT
+       SIV    11, 11, 12, A1, 15.5 $10.0       $CONDUCTION THROUGH SKIRT
+       SIV    12, 12, 13, A1, 15.5 $10.0       $CONDUCTION THROUGH SKIRT
+       SIV    13, 13, 16, A1, 18.5 $11.9       $CONDUCTION THROUGH SKIRT
+       SIV    14, 16, 21, A1, 18.5 $11.9       $CONDUCTION THROUGH SKIRT
+C         FORWARD LAP COMPOSITE SKIRT
+       SIV    15, 21, 25, A3, 11.0 $11.9       $CONDUCTION THROUGH COMPOSITE SKIRT
+C         SPLICE AREA - CONDUCTION PARALLEL TO SKIRT
+       SIV    16, 14, 20, A2, 8.1        $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    17, 20, 23, A2, 8.1        $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    18, 18, 22, A2, 8.2        $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    19, 22, 2000, A2, 138.     $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    191, 2000, 2701, A2, 138.  $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    192, 2701, 27, A2, 8.2     $CONDUCTION THROUGH ALUMINUM-7075
+C         FORWARD LAP SKIRT - CONDUCTION PERPENDICULAR TO SKIRT (INNER)
+       SIV    20, 2, 29, A1, 2788.       $CONDUCTION THROUGH SKIRT
+       SIV    21, 4, 30, A1, 1559.       $CONDUCTION THROUGH SKIRT
+       SIV    22, 6, 31, A1, 826.0       $CONDUCTION THROUGH SKIRT
+       SIV    23, 8, 32, A1, 924.0       $CONDUCTION THROUGH SKIRT
+       SIV    24, 10, 33, A1, 29333.     $CONDUCTION THROUGH SKIRT
+       SIV    25, 12, 34, A1, 1859.      $CONDUCTION THROUGH SKIRT
+C         FORWARD LAP SKIRT - CONDUCTION PERPENDICULAR TO SKIRT (OUTER)
+       SIV    201, 2, 129, A1, 2788.     $CONDUCTION THROUGH SKIRT
+       SIV    211, 4, 130, A1, 1559.     $CONDUCTION THROUGH SKIRT
+       SIV    221, 6, 131, A1, 826.0     $CONDUCTION THROUGH SKIRT
+       SIV    231, 8, 132, A1, 924.0     $CONDUCTION THROUGH SKIRT
+       SIV    241, 10, 133, A1, 29333.   $CONDUCTION THROUGH SKIRT
+       SIV    251, 12, 134, A1, 1859.    $CONDUCTION THROUGH SKIRT
+C         SPLICE AREA - CONDUCTION PERPENDICULAR TO SKIRT
+       SIV    261, 114, 14, A2, 2503.    $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    26, 14, 15, A2, 2503.      $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    27, 15, 16, A1, 1594.      $CONDUCTION THROUGH ALUMINUM-2219
+       SIV    28, 16, 17, A1, 1595.      $CONDUCTION THROUGH ALUMINUM-2219
+       SIV    29, 17, 18, A2, 2341.      $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    30, 18, 19, A2, 2343.      $CONDUCTION THROUGH ALUMINUM-7075
+C         CONDUCTION PERPENDICULAR TO SKIRT THROUGH FRAME
+       SIV    301, 2000, 2001, A2, 94.3      $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    302, 2001, 2002, A2, 4.0       $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    303, 2002, 2005, A2, 4.0       $CONDUCTION THROUGH ALUMINUM-7075
+C         CONDUCTION PARALLEL TO SKIRT THROUGH FRAME
+       SIV    304, 2002, 2003, A2, 4918.     $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    305, 2002, 2004, A2, 4918.     $CONDUCTION THROUGH ALUMINUM-7075
+C         SPLICE AREA (COMPOSITE SIDE)- CONDUCTION PERPENDICULAR TO SKIRT
+       SIV    311, 123, 23, A2, 2503.    $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    31, 23, 24, A2, 2503.      $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    32, 24, 25, A1, 1594.      $CONDUCTION THROUGH ALUMINUM-2219
+       SIV    33, 25, 26, A1, 1595.      $CONDUCTION THROUGH ALUMINUM-2219
+       SIV    34, 26, 27, A2, 2341.      $CONDUCTION THROUGH ALUMINUM-7075
+       SIV    35, 27, 28, A2, 2343.      $CONDUCTION THROUGH ALUMINUM-7075
+C        CONVECTION FROM INNER SURFACES
+       FAC 1.47
+          360,19, 351, 5.16      $23%x1.53
+          37, 28, 35,  15.7      $x1.07
+          38, 29, 352, 34.9      $x1.00, crotch area
+          39, 30, 352, 14.3      $x1.00
+          40, 31, 352, 13.1      $x1.00
+          41, 32, 352, 8.52      $x1.00
+          42, 33, 352, 29.4      $x1.00
+          421,33, 351, 105.      $x1.53
+          430,34, 351, 16.7      $64%x1.53
+          431, 2003, 35, 32.8    $x1.07 
+          4320,2004, 351,30.0    $64%x1.53
+          433, 2005, 35, 0.89    $x1.07
+       FAC 1.00
+C        CONVECTION TO INNER SURFACES-DIRECT IMPINGEMENT
+          361, 19, 350, 19.2 $77%xAx1.7
+          4311, 34, 350, 10.4 $36%xAx1.7
+          4321, 2004, 350, 18.8 $36%xAx1.7
+C        BLEED-OFF TO COMPARTMENT AIR
+          9000,-36,   35, 264.
+C
+C        ov intertank COMPARTMENT purge AIR
+C
+          9001,-370,   35, 316.8    $ 22.0 lbm/min * 14.4, afc 5/31/98
+C
+C        ov RP tank bot dome surface convection, afc 5/31/98
+C
+          9002, 3701,   35, 163.6    $ A=152.9 * h=1.07
+C
+C        CONVECTION FROM PURGE INLET
+          600, -36,  350, 425.  
+          601, -350, 351, 425.
+          602, -351, 352, 425.
+          603, -352, 35,  425.
+C        CONVECTION FROM LOX INSULATION TO AMBIENT AIR
+          47, 101, 35, 502.     $x1.07
+          471,101, 35, 285.     $x1.00
+C        CONDUCTION THROUGH SS1171 LOX TANK INSULATION
+       SIV    45, 1, 100, A4, 13680.
+       SIV    46, 100, 101, A4, 13680.
+C        CONDUCTION THROUGH CRYOFOAM INSULATION(INNER)
+       FAC 1.5
+          48, 114, 214, 7.03
+          49, 123, 223, 7.03
+          50, 129, 229, 16.8
+          51, 130, 230, 6.90
+          52, 131, 231, 6.28
+          53, 132, 232, 4.10
+          54, 133, 233, 47.0
+          55, 134, 234, 8.20
+C        CONDUCTION THROUGH CRYOFOAM INSULATION(OUTER)
+          56, 214, 314, 7.03
+          57, 223, 323, 7.03
+          58, 229, 329, 16.8
+          59, 230, 330, 6.90
+          60, 231, 331, 6.28
+          61, 232, 332, 4.10
+          62, 233, 333, 47.0
+          63, 234, 334, 8.20
+       FAC 1.0
+C        CONDUCTION THROUGH HTA INSULATION(INNER)
+       FAC 3.75
+          64, 314, 414, 16.5
+          65, 323, 423, 16.5
+          66, 329, 429, 39.4
+          67, 330, 430, 16.2
+          68, 331, 431, 14.7
+          69, 332, 432, 9.61
+          70, 333, 433, 110.
+          71, 334, 434, 19.2
+C        CONDUCTION THROUGH HTA INSULATION(OUTER)
+          72, 414, 514, 16.5
+          73, 423, 523, 16.5
+          74, 429, 529, 39.4
+          75, 430, 530, 16.2
+          76, 431, 531, 14.7
+          77, 432, 532, 9.61
+          78, 433, 533, 110.
+          79, 434, 534, 19.2
+       FAC 1.0
+C        CONVECTION FROM HTA INSULATION TO OUTSIDE AMBIENT AIR
+       FAC 0.91
+          80, 514, 37, 12.9
+          81, 523, 37, 12.9
+          82, 529, 37, 30.7
+          83, 530, 37, 12.6
+          84, 531, 37, 11.5
+          85, 532, 37, 7.50
+          86, 533, 37, 86.2
+          87, 534, 37, 15.0
+       FAC 1.0
+C        RADIATION FROM HTA INSULATION TO OUTSIDE AMBIENT AIR
+          -88, 514, 37, 11.7
+          -89, 523, 37, 11.7
+          -90, 529, 37, 28.0
+          -91, 530, 37, 11.5
+          -92, 531, 37, 10.5
+          -93, 532, 37, 6.80
+          -94, 533, 37, 78.3
+          -95, 534, 37, 13.7
+       END
+       BCD 3CONSTANTS
+           NDIM=10000
+           DRLXCA=0.1
+           ARLXCA=0.1
+           BALENG=1.0
+           NLOOP=1000.
+           SIGMA=0.1714E-8
+           1=0.
+           100=29.51          $ LOX skirt purge flow (lbm/min)
+           101=0.0001         $ bypass purge flow (lbm/min)
+           110=1.53           $ "wash-area" h coeff. (btu/hr-ft^2-F)
+           111=1.07           $ LOX dome insul. surface h coeff. (btu/hr-ft^2-F)
+           112=1.70           $ Jet direct impingment h coeff. (btu/hr-ft^2-F)
+           113=1.0            $ behind debre shield h coeff. (btu/hr-ft^2-F)
+           114=0.0001         $ Crotch area h coeff. (btu/hr-ft^2-F)
+           120=-999.0         $ LOX Al skirt max temperature
+           121=999.0          $ LOX Al skirt min temperature
+           122=-999.0         $ LOX Composite skirt max temperature
+           123=999.0          $ LOX Composite skirt min temperature
+           130=0.0            $ output call accumulator variable
+           140=55.0           $ purge supply temperature (F)
+           141=-14.0          $ exterior ambient temperature (F)
+           150=22.0           $ ov intertank purge flow (lbm/min)
+           151=-25.0          $ ov intertank purge temperature (F)
+           152=1.07           $ bot. RP tank dome surface h coeff. (btu/hr-ft^2-F)
+           160=0.0            $ net energy loss by bulk air (btu/hr)
+       END
+       BCD 3ARRAY DATA
+C       AL-2219  K  VS.  TEMP.
+                1, -350., 31., -300., 39., -200., 52.5, -100., 61.5
+                         0., 69., 100., 74., 200., 78., 300., 82., END
+C       AL-7075  K  VS.  TEMP.
+                2, -350., 80.5, 0., 91., 100., 94., 200., 98., 300., 101., END
+C       GRAPHITE/EPOXY K  VS.  TEMP.
+                3, -244., 0.289, 80., 0.520, 602., 0.809, END
+C       SS1171 K  VS.  TEMP.
+                4, -400., 0.004098, -200., 0.008894, -100., 0.011292
+                         0., 0.01369, 100., 0.016088, 200., 0.018486
+                         300., 0.020884, END
+C       CRYOFOAM K = 0.015
+       END
+       BCD 3EXECUTION
+F      open(88,file='fwdlap_afc_c_88.out',access='sequential',
+F    +  status='unknown')
+M       XK130 = 0
+           SNDSNR
+       END
+       BCD 3VARIABLES 1
+C
+C        CONVECTION FROM PURGE INLET
+C
+M      T36=XK140
+M      T37=XK141
+C
+M      G600=XK100 * 14.4
+M      G601=XK100 * 14.4
+M      G602=XK100 * 14.4
+M      G603=XK100 * 14.4
+C
+C        BLEED-OFF TO COMPARTMENT AIR
+C
+M      G9000=XK101 * 14.4
+C
+C        CONVECTION FROM INNER SURFACES
+C
+M      G360=XK110 * 1.47 * 14.7 * 0.23     $23%x1.53
+M      G37=XK111 * 1.47 * 14.7 * 1.0       $x1.07
+M      G38=XK114 * 1.00 * 34.9 * 1.0       $x1.00, crotch area
+M      G39=XK113 * 1.47 * 14.3 * 1.0       $x1.00, behind debre shield
+M      G40=XK113 * 1.47 * 13.1 * 1.0       $x1.00, behind debre shield
+M      G41=XK113 * 1.47 * 8.52 * 1.0       $x1.00, behind debre shield
+M      G42=XK113 * 1.47 * 98.0 * 0.30      $30%x1.00, behind debre shield
+M      G421=XK110 * 1.47 * 98.0 * 0.70     $70%x1.53
+M      G430=XK110 * 1.47 * 17.0 * 0.64     $64%x1.53
+M      G431=XK111 * 1.47 * 30.7 * 1.0      $x1.07 
+M      G4320=XK110 * 1.47 * 30.7 * 0.64    $64%x1.53
+M      G433=XK111 * 1.47 * 0.80 * 1.0      $x1.07
+C
+C        CONVECTION TO INNER SURFACES-DIRECT IMPINGEMENT
+C
+M      G361=XK112 * 1.00 * 14.7 * 0.77     $77%xAx1.7
+M      G4311=XK112 * 1.00 * 17.0 * 0.36    $36%xAx1.7
+M      G4321=XK112 * 1.00 * 30.7 * 0.36    $36%xAx1.7
+C
+C
+M      T370=XK151             $ ov intertank purge temperature (F)
+C
+M      G9001=XK150 * 14.4     $ ov intertank purge flow (lbm/min)
+M      G9002=XK152 * 152.9    $ A=152.9 * h=1.07, bot. RP tank dome surface h coeff.
+C
+C
+       END
+       BCD 3VARIABLES 2
+       END
+       BCD 3OUTPUT CALLS
+C           QDUMP
+           TPRINT 
+C
+M      XK120  = -999.0
+M      XK121  =  999.0
+M      XK122  = -999.0
+M      XK123  =  999.0
+C
+C  Determine LOX Al skirt max temperature
+C
+M      if (T2.gt.XK120) then
+M        XK120 = T2
+M      end if
+M      if (T3.gt.XK120) then
+M        XK120 = T3
+M      end if
+M      if (T4.gt.XK120) then
+M        XK120 = T4
+M      end if
+M      if (T5.gt.XK120) then
+M        XK120 = T5
+M      end if
+M      if (T6.gt.XK120) then
+M        XK120 = T6
+M      end if
+M      if (T7.gt.XK120) then
+M        XK120 = T7
+M      end if
+M      if (T8.gt.XK120) then
+M        XK120 = T8
+M      end if
+M      if (T9.gt.XK120) then
+M        XK120 = T9
+M      end if
+M      if (T10.gt.XK120) then
+M        XK120 = T10
+M      end if
+M      if (T11.gt.XK120) then
+M        XK120 = T11
+M      end if
+M      if (T12.gt.XK120) then
+M        XK120 = T12
+M      end if
+M      if (T13.gt.XK120) then
+M        XK120 = T13
+M      end if
+M      if (T14.gt.XK120) then
+M        XK120 = T14
+M      end if
+M      if (T15.gt.XK120) then
+M        XK120 = T15
+M      end if
+M      if (T16.gt.XK120) then
+M        XK120 = T16
+M      end if
+M      if (T17.gt.XK120) then
+M        XK120 = T17
+M      end if
+M      if (T18.gt.XK120) then
+M        XK120 = T18
+M      end if
+M      if (T19.gt.XK120) then
+M        XK120 = T19
+M      end if
+M      if (T20.gt.XK120) then
+M        XK120 = T20
+M      end if
+M      if (T21.gt.XK120) then
+M        XK120 = T21
+M      end if
+M      if (T22.gt.XK120) then
+M        XK120 = T22
+M      end if
+M      if (T23.gt.XK120) then
+M        XK120 = T23
+M      end if
+M      if (T24.gt.XK120) then
+M        XK120 = T24
+M      end if
+M      if (T26.gt.XK120) then
+M        XK120 = T26
+M      end if
+M      if (T27.gt.XK120) then
+M        XK120 = T27
+M      end if
+M      if (T28.gt.XK120) then
+M        XK120 = T28
+M      end if
+M      if (T29.gt.XK120) then
+M        XK120 = T29
+M      end if
+M      if (T30.gt.XK120) then
+M        XK120 = T30
+M      end if
+M      if (T31.gt.XK120) then
+M        XK120 = T31
+M      end if
+M      if (T32.gt.XK120) then
+M        XK120 = T32
+M      end if
+M      if (T33.gt.XK120) then
+M        XK120 = T33
+M      end if
+M      if (T34.gt.XK120) then
+M        XK120 = T34
+M      end if
+M      if (T114.gt.XK120) then
+M        XK120 = T114
+M      end if
+M      if (T123.gt.XK120) then
+M        XK120 = T123
+M      end if
+M      if (T129.gt.XK120) then
+M        XK120 = T129
+M      end if
+M      if (T130.gt.XK120) then
+M        XK120 = T130
+M      end if
+M      if (T131.gt.XK120) then
+M        XK120 = T131
+M      end if
+M      if (T132.gt.XK120) then
+M        XK120 = T132
+M      end if
+M      if (T133.gt.XK120) then
+M        XK120 = T133
+M      end if
+M      if (T134.gt.XK120) then
+M        XK120 = T134
+M      end if
+M      if (T2000.gt.XK120) then
+M        XK120 = T2000
+M      end if
+M      if (T2001.gt.XK120) then
+M        XK120 = T2001
+M      end if
+M      if (T2002.gt.XK120) then
+M        XK120 = T2002
+M      end if
+M      if (T2003.gt.XK120) then
+M        XK120 = T2003
+M      end if
+M      if (T2004.gt.XK120) then
+M        XK120 = T2004
+M      end if
+M      if (T2005.gt.XK120) then
+M        XK120 = T2005
+M      end if
+M      if (T2701.gt.XK120) then
+M        XK120 = T2701
+M      end if
+C
+C
+C  Determine LOX Al skirt min temperature
+C
+M      if (T2.lt.XK121) then
+M        XK121 = T2
+M      end if
+M      if (T3.lt.XK121) then
+M        XK121 = T3
+M      end if
+M      if (T4.lt.XK121) then
+M        XK121 = T4
+M      end if
+M      if (T5.lt.XK121) then
+M        XK121 = T5
+M      end if
+M      if (T6.lt.XK121) then
+M        XK121 = T6
+M      end if
+M      if (T7.lt.XK121) then
+M        XK121 = T7
+M      end if
+M      if (T8.lt.XK121) then
+M        XK121 = T8
+M      end if
+M      if (T9.lt.XK121) then
+M        XK121 = T9
+M      end if
+M      if (T10.lt.XK121) then
+M        XK121 = T10
+M      end if
+M      if (T11.lt.XK121) then
+M        XK121 = T11
+M      end if
+M      if (T12.lt.XK121) then
+M        XK121 = T12
+M      end if
+M      if (T13.lt.XK121) then
+M        XK121 = T13
+M      end if
+M      if (T14.lt.XK121) then
+M        XK121 = T14
+M      end if
+M      if (T15.lt.XK121) then
+M        XK121 = T15
+M      end if
+M      if (T16.lt.XK121) then
+M        XK121 = T16
+M      end if
+M      if (T17.lt.XK121) then
+M        XK121 = T17
+M      end if
+M      if (T18.lt.XK121) then
+M        XK121 = T18
+M      end if
+M      if (T19.lt.XK121) then
+M        XK121 = T19
+M      end if
+M      if (T20.lt.XK121) then
+M        XK121 = T20
+M      end if
+M      if (T21.lt.XK121) then
+M        XK121 = T21
+M      end if
+M      if (T22.lt.XK121) then
+M        XK121 = T22
+M      end if
+M      if (T23.lt.XK121) then
+M        XK121 = T23
+M      end if
+M      if (T24.lt.XK121) then
+M        XK121 = T24
+M      end if
+M      if (T26.lt.XK121) then
+M        XK121 = T26
+M      end if
+M      if (T27.lt.XK121) then
+M        XK121 = T27
+M      end if
+M      if (T28.lt.XK121) then
+M        XK121 = T28
+M      end if
+M      if (T29.lt.XK121) then
+M        XK121 = T29
+M      end if
+M      if (T30.lt.XK121) then
+M        XK121 = T30
+M      end if
+M      if (T31.lt.XK121) then
+M        XK121 = T31
+M      end if
+M      if (T32.lt.XK121) then
+M        XK121 = T32
+M      end if
+M      if (T33.lt.XK121) then
+M        XK121 = T33
+M      end if
+M      if (T34.lt.XK121) then
+M        XK121 = T34
+M      end if
+M      if (T114.lt.XK121) then
+M        XK121 = T114
+M      end if
+M      if (T123.lt.XK121) then
+M        XK121 = T123
+M      end if
+M      if (T129.lt.XK121) then
+M        XK121 = T129
+M      end if
+M      if (T130.lt.XK121) then
+M        XK121 = T130
+M      end if
+M      if (T131.lt.XK121) then
+M        XK121 = T131
+M      end if
+M      if (T132.lt.XK121) then
+M        XK121 = T132
+M      end if
+M      if (T133.lt.XK121) then
+M        XK121 = T133
+M      end if
+M      if (T134.lt.XK121) then
+M        XK121 = T134
+M      end if
+M      if (T2000.lt.XK121) then
+M        XK121 = T2000
+M      end if
+M      if (T2001.lt.XK121) then
+M        XK121 = T2001
+M      end if
+M      if (T2002.lt.XK121) then
+M        XK121 = T2002
+M      end if
+M      if (T2003.lt.XK121) then
+M        XK121 = T2003
+M      end if
+M      if (T2004.lt.XK121) then
+M        XK121 = T2004
+M      end if
+M      if (T2005.lt.XK121) then
+M        XK121 = T2005
+M      end if
+M      if (T2701.lt.XK121) then
+M        XK121 = T2701
+M      end if
+C
+C
+C  Determine LOX Composite skirt max temperature
+C
+M      if (T21.gt.XK122) then
+M        XK122 = T21
+M      end if
+M      if (T24.gt.XK122) then
+M        XK122 = T24
+M      end if
+M      if (T25.gt.XK122) then
+M        XK122 = T25
+M      end if
+M      if (T26.gt.XK122) then
+M        XK122 = T26
+M      end if
+C
+C
+C  Determine LOX Composite skirt min temperature
+C
+M      if (T21.lt.XK123) then
+M        XK123 = T21
+M      end if
+M      if (T24.lt.XK123) then
+M        XK123 = T24
+M      end if
+M      if (T25.lt.XK123) then
+M        XK123 = T25
+M      end if
+M      if (T26.lt.XK123) then
+M        XK123 = T26
+M      end if
+C
+M      XK160 = XK100 * 14.4 * (T35 - T36)
+M      XK160 = XK160 + G9000 * (T35 - T36)
+M      XK160 = XK160 + G9001 * (T35 - T370)
+C
+M      XK130 = XK130 + 1.0
+M      if (XK130.gt.3.0) then
+M        write(88,991) T35,T350,T351,T352,XK120,XK121,XK122,XK123,XK160
+M      endif
+F 991 format(1x,9(E14.7,1x))
+       END
+       BCD 3END OF DATA 
+
